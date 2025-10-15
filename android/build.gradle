@@ -2,14 +2,14 @@ group 'yukams.app.background_locator_2'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = '1.7.20'
+    ext.kotlin_version = '1.9.0'
     repositories {
         google()
-        mavenCentral()  // substitui jcenter() que foi descontinuado
+        mavenCentral()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.0'
+        classpath 'com.android.tools.build:gradle:8.13.0'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -27,11 +27,11 @@ apply plugin: 'kotlin-android'
 android {
     namespace 'yukams.app.background_locator_2'
 
-    compileSdkVersion 31  // o android:attr/lStar so existe do 31 em diante
+    compileSdkVersion 35
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 31 
+        minSdkVersion 24
+        targetSdkVersion 35
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
